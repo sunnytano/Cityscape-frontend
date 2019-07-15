@@ -27,3 +27,12 @@ A booking web app where users can search for a listing in New York City, view li
 
 ![Landing](https://raw.githubusercontent.com/sunnytano/Cityscape-frontend/master/public/screenshot.png)
 
+## Installation
+
+* npm install
+* npm start
+* bundle install
+* rails db:create, db:create, rails:db:seed
+* rails s
+
+
