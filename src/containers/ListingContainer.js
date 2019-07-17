@@ -25,13 +25,13 @@ class ListingContainer extends React.Component {
           </div>
           <div className="listing-data">
             {this.props.listings.map((listing) => {
-              if (listing.name && listing.price !== null) {
+              // if (listing.name && listing.price !== null) {
                 return <ListingCard key={listing.id} listing={listing}
                   selectListing={this.props.selectListing}
                   currentUser={this.props.currentUser}
                   updateBookings={this.props.updateBookings}
                   token={this.props.token} />
-              }
+              // }
             })}
           </div>
         </div>
