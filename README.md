@@ -33,14 +33,14 @@ https://fierce-mountain-71124.herokuapp.com/
 
 ### Frontend Installation
 ```
-* npm install
-* npm start
+npm install
+npm start
 ```
 ### Backend Installation
 ```
-* bundle install
-* rails db:create, rails db:migrate, rails:db:seed
-* rails s
+bundle install
+rails db:create, rails db:migrate, rails:db:seed
+rails s
 ```
 
 
