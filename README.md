@@ -1,6 +1,12 @@
 # Cityscape
-
 A booking web app where users can search for a listing in New York City, view listings with google maps, book and delete listing. User can also become a host and add listing for other users to book. Created with React, Google Maps API, NYC Airbnb Open Data, Ruby on Rails API, OAuth, Semantic-Ui and CSS
+
+#### Here is a live version
+https://fierce-mountain-71124.herokuapp.com/
+
+## Screenshot 
+
+![Landing](https://raw.githubusercontent.com/sunnytano/Cityscape-frontend/master/public/screenshot.png)
 
 ## Features
 
@@ -22,10 +28,6 @@ A booking web app where users can search for a listing in New York City, view li
 * Bcrypt
 * Semantic-UI
 * CSS
-
-## Screenshot 
-
-![Landing](https://raw.githubusercontent.com/sunnytano/Cityscape-frontend/master/public/screenshot.png)
 
 ## Installation
 ```
