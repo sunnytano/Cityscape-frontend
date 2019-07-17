@@ -32,7 +32,7 @@ A booking web app where users can search for a listing in New York City, view li
 * npm install
 * npm start
 * bundle install
-* rails db:create, db:create, rails:db:seed
+* rails db:create, rails db:migrate, rails:db:seed
 * rails s
 ```
 
