@@ -1,5 +1,4 @@
 import React from "react";
-import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom';
 import '../App.css'
 import { Button, Header, Image, Modal, Form, Input } from 'semantic-ui-react'
 
@@ -7,7 +6,7 @@ class Listingcard extends React.Component {
 
   getBooking = (event, listId, userId) => {
     event.preventDefault()
-    fetch('http://localhost:3333/api/v1/bookings', {
+    fetch('https://cityscape-api-backend.herokuapp.com/api/v1/bookings', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",

@@ -3,7 +3,7 @@ import React from 'react'
 class BookingCard extends React.Component {
 
     handleDelete = (bookingId) => {
-        let url = `http://localhost:3333/api/v1/bookings/${bookingId}`
+        let url = `https://cityscape-api-backend.herokuapp.com/api/v1/bookings/${bookingId}`
         fetch(url, {
             method: "DELETE",
             headers: {

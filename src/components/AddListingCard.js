@@ -5,7 +5,7 @@ import '../App.css'
 class AddListingCard extends React.Component {
 
     handleDelete = (listingId) => {
-        let url = `http://localhost:3333/api/v1/listings/${listingId}`
+        let url = `https://cityscape-api-backend.herokuapp.com/api/v1/listings/${listingId}`
         fetch(url, {
             method: "DELETE",
             headers: {

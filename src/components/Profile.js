@@ -14,7 +14,7 @@ class Profile extends React.Component {
     }
     getUsers = () => {
         const userId = this.props.match.params.id
-        const userUrl = `http://localhost:3333/api/v1/users/${userId}`
+        const userUrl = `https://cityscape-api-backend.herokuapp.com/api/v1/users/${userId}`
         fetch(userUrl)
             .then(resp => resp.json())
             .then(data => {

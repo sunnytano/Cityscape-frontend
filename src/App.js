@@ -95,7 +95,7 @@ class App extends React.Component {
 		const token = localStorage.getItem("token")
 		if (token) {
 			// let's go get some user listing
-			fetch("http://localhost:3333/api/v1/auto_login", {
+			fetch("https://cityscape-api-backend.herokuapp.com/api/v1/auto_login", {
 				method: "GET",
 				headers: {
 					"accepts": "application/json",
@@ -112,7 +112,7 @@ class App extends React.Component {
 					}
 				})
 		}
-		let listingUrl = "http://localhost:3333/api/v1/listings"
+		let listingUrl = "https://cityscape-api-backend.herokuapp.com/api/v1/listings"
 		fetch(listingUrl)
 			.then(resp => resp.json())
 			.then(listing => {

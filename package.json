@@ -5,6 +5,7 @@
   "dependencies": {
     "google-map-react": "^1.1.4",
     "google-maps-react": "^2.0.2",
+    "heroku": "^7.26.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^4.3.1",

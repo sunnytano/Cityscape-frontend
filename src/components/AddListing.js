@@ -30,7 +30,7 @@ class AddListing extends React.Component {
     }
     this.props.handleAddNew(newListing)
 
-    const newListingURL = "http://localhost:3333/api/v1/listings"
+    const newListingURL = "https://cityscape-api-backend.herokuapp.com/api/v1/listings"
     fetch(newListingURL, {
       method: "POST",
       headers: {

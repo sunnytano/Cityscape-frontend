@@ -17,7 +17,7 @@ class SignupForm extends React.Component {
 	}
 
 	createUser = () => {
-		fetch("http://localhost:3333/api/v1/users", {
+		fetch("https://cityscape-api-backend.herokuapp.com/api/v1/users", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
