@@ -3,7 +3,7 @@ A booking web app where users can search for a listing in New York City, view li
 
 ## Screenshot 
 Live Demo:
-https://fierce-mountain-71124.herokuapp.com/listings
+https://fierce-mountain-71124.herokuapp.com
 
 ![Landing](https://raw.githubusercontent.com/sunnytano/Cityscape-frontend/master/public/screenshot.png)
 
