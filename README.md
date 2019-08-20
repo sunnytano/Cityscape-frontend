@@ -2,9 +2,6 @@
 A booking web app where users can search for a listing in New York City, view listings with google maps, book and delete listing. User can also become a host and add listing for other users to book. Created with React, Google Maps API, NYC Airbnb Open Data, Ruby on Rails API, OAuth, Semantic-Ui and CSS
 
 ## Screenshot 
-Live Demo:
-https://fierce-mountain-71124.herokuapp.com
-
 ![Landing](https://raw.githubusercontent.com/sunnytano/Cityscape-frontend/master/public/screenshot.png)
 
 ## Features
