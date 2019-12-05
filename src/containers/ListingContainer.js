@@ -3,12 +3,11 @@ import GoogleMapReact from 'google-map-react';
 import Marker from '../components/Marker';
 import ListingCard from '../components/ListingCard'
 import '../App.css'
+const API_KEY = process.env.REACT_APP_API_KEY
 
 class ListingContainer extends React.Component {
-
   render() {
-
-    console.log(this.props)
+    // console.log(this.props.currentUser)
     let center = {
       lat: 40.73, lng: -73.93
     };
@@ -37,10 +36,15 @@ class ListingContainer extends React.Component {
         </div>
         <div className="map">
           <GoogleMapReact
+               bootstrapURLKeys={{
+                key: API_KEY, 
+                language: 'en'
+             }}
             defaultCenter={center}
             defaultZoom={11}>
             {this.props.listings.map((listing) => {
               return <Marker
+                key={listing.id}
                 lat={listing.latitude || 40.73}
                 lng={listing.longitude || -73.93} {...listing}
                 selected={listing === this.props.selectedListing} />

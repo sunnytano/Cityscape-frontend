@@ -1,6 +1,6 @@
 import React from "react";
 import '../App.css'
-import { Button, Header, Image, Modal, Form, Input } from 'semantic-ui-react'
+import { Button, Modal, Form } from 'semantic-ui-react'
 
 class Listingcard extends React.Component {
 
@@ -26,10 +26,11 @@ class Listingcard extends React.Component {
   }
 
   render() {
+    // console.log(this.props)
     const { neighborhood, name, price } = this.props.listing
     return (
       <div className="listing" onClick={this.handleClick}>
-        <img src={this.props.listing.image_small} className="listing-picture" />
+        <img src={this.props.listing.image_small} className="listing-picture" alt="listing" />
         <div className="listing-title">{neighborhood}
           <br/>
           {name}
@@ -45,7 +46,7 @@ class Listingcard extends React.Component {
           <h2 style={{fontFamily: "Gothic A1"}}>
             {this.props.listing.name}
           </h2>
-          <img src={this.props.listing.image} />
+          <img src={this.props.listing.image} alt="listing" />
           <Form style={{fontFamily: "Gothic A1"}} onSubmit={(e) => this.getBooking(e, this.props.listing.id, this.props.currentUser.id)}>
               <Button style={{fontFamily: "Gothic A1"}} type="submit">Book Listing</Button>
           </Form>

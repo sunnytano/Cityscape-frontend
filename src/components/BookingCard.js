@@ -17,14 +17,11 @@ class BookingCard extends React.Component {
     render() {
         return (
             <div style={{ fontFamily: "Gothic A1" }} className="booking-card">
-                <p>
                     {this.props.booking.listing.name}
-                </p>
-                <p>{this.props.booking.listing.neighborhood}
-                    <img className="booking-image"
+                {this.props.booking.listing.neighborhood}
+                    <img className="booking-image" alt="booking"
                         src={this.props.booking.listing.image_small} />
                     {this.props.booking.listing.price}
-                </p>
                 <button className="delete-button"
                     onClick={() => this.handleDelete(this.props.booking.id)}>
                     DELETE

@@ -48,10 +48,10 @@ class AddListing extends React.Component {
   }
 
   render() {
-    console.log("HERE", this.props.currentUser)
-    console.log(this.props.token)
-    console.log(this.state.listings)
-    const { neighborhood, borough, description, min_night, price, } = this.state
+    // console.log("HERE", this.props.currentUser)
+    // console.log(this.props.token)
+    // console.log(this.state.listings)
+    const { neighborhood, borough, description, price } = this.state
     return (
       <div>
         <div className="addlisting-img">

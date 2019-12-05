@@ -18,11 +18,11 @@ class Profile extends React.Component {
         fetch(userUrl)
             .then(resp => resp.json())
             .then(data => {
-
                 this.setState({
                     users: data
-                }, console.log('our data in componentDidMount', this.state))
+                // }, console.log('our data in componentDidMount', this.state))
             })
+        })
     }
 
     remove = (remBooking) => {
@@ -37,8 +37,8 @@ class Profile extends React.Component {
     }
 
     render() {
-        console.log("inside render: ", this.state)
-        console.log("WHYYYY", this.state.users)
+        // console.log("inside render: ", this.state)
+        // console.log("WHYYYY", this.state.users)
         if (this.state.users) {
             return (
                 <div>
@@ -48,17 +48,16 @@ class Profile extends React.Component {
                                 <h2>Welcome, {this.state.users.first_name} {this.state.users.last_name}! </h2>
                                 <h3>Email: {this.state.users.email}</h3>
                             </div>
-
                             <br />
                             <br />
                             <h3 className="booking-header">Here are your bookings:</h3>
                             <div className="booking-div">
-                                <p>{this.state.users.bookings.map(booking => {
+                                {this.state.users.bookings.map(booking => {
                                     return <BookingCard
                                         key={booking.id} booking={booking}
                                         remove={this.remove}
                                         handleRemove={this.remove} />
-                                })}</p>
+                                })}
                             </div>
                         </div>
                     </div>

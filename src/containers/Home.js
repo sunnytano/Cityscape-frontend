@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import YoutubeBackground from 'react-youtube-background'
+// import YoutubeBackground from 'react-youtube-background'
 import '../App.css'
 
 class Home extends React.Component {
@@ -18,7 +18,7 @@ class Home extends React.Component {
   render() {
     //<img className="ui large rounded image" src="https://media2.giphy.com/media/VM3cTSXyuuXQc/source.gif" />
     //<img className="ui large rounded image" src="https://media.giphy.com/media/fAxJoWdIK7kSQ/giphy.gif" />
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <div className="home-container">
         <h1 className="tagline">Cityscape</h1>
@@ -28,7 +28,7 @@ class Home extends React.Component {
         <Link onClick={this.handleShow} to='/listings'><i className="search icon"></i></Link>
         <br />
         <br />
-        <img className="ui large rounded image" src="https://media.giphy.com/media/fAxJoWdIK7kSQ/giphy.gif" />
+        <img className="ui large rounded image" alt="homepage" src="https://media.giphy.com/media/fAxJoWdIK7kSQ/giphy.gif" />
         <br />
         <br />
       </div>

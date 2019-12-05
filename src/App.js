@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Login from './components/Login'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import { Grid } from 'semantic-ui-react'
 import Signup from './components/Signup.js'
 import Navbar from './components/Navbar'
@@ -9,6 +9,7 @@ import Profile from './components/Profile'
 import AddListing from './components/AddListing'
 import Home from './containers/Home'
 import ListingContainer from './containers/ListingContainer'
+console.log(process.env.REACT_APP_API_KEY)
 
 class App extends React.Component {
 
@@ -59,7 +60,7 @@ class App extends React.Component {
 	// }
 
 	updateBookings = (newBooking) => {
-		console.log(newBooking)
+		// console.log(newBooking)
 		this.setState({
 			booking: [newBooking, ...this.state.bookings]
 		}, () => this.props.history.push(`/users/${this.state.currentUser.id}`))
@@ -78,8 +79,7 @@ class App extends React.Component {
 	}
 
 	handleSearch = event => {
-		console.log(event.target.value)
-
+		// console.log(event.target.value)
 		this.setState({
 			search: event.target.value
 		})
@@ -141,9 +141,15 @@ class App extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.currentUser)
-		console.log(this.state.listings)
-		console.log(this.state.search)
+		// console.log(this.state.currentUser)
+		// console.log(this.state.listings)
+		// console.log(this.state.search)
+		const filteredListing = this.state.allListings.filter((listing) => {
+			if (listing.neighborhood  !== null) {
+				return listing.neighborhood.toLowerCase().includes(this.state.search.toLowerCase())
+			}
+		})
+
 		return (
 			<Grid>
 				<Navbar currentUser={this.state.currentUser}
@@ -156,11 +162,7 @@ class App extends React.Component {
 						<Route path="/listings" render={(routerProps) => {
 							return <ListingContainer
 								token={this.state.token}
-								listings={this.state.allListings.filter((listing) => {
-									if (listing.neighborhood !== null) {
-										return listing.neighborhood.toLowerCase().includes(this.state.search.toLowerCase())
-									}
-								})}
+								listings={filteredListing}
 								search={this.state.search}
 								selectedListing={this.state.selectedListing}
 								allListings={this.state.allListings}
